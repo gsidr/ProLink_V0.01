@@ -1,0 +1,5 @@
+{
+    "mongoURI":"mongodb+srv://msidr:damnnoob1@socialmediaapp1.cbjmm.mongodb.net/SocialMediaApp1?retryWrites=true&w=majority",
+    "jwtSecret":"appSecretToken",
+    "githubToken":"87bd4fb271a84898bb5dc6365360213f24f0ba6f "
+}
