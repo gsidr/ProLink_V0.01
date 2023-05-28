@@ -1,14 +1,14 @@
-import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import PostItem from './PostItem';
-import PostForm from './PostForm';
-import { getPosts } from '../../actions/post';
+import React, { Fragment, useEffect } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import PostItem from "./PostItem";
+import PostForm from "./PostForm";
+import { getPosts } from "../../actions/post";
 
 const Posts = ({ getPosts, post: { posts } }) => {
   useEffect(() => {
-    getPosts();
-  }, [getPosts]);
+    getPosts(); //getPosts in an action which calls the api and gets the data of all posts.
+  }, []);
 
   return (
     <Fragment>
@@ -28,11 +28,11 @@ const Posts = ({ getPosts, post: { posts } }) => {
 
 Posts.propTypes = {
   getPosts: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  post: state.post
+  post: state.post,
 });
 
 export default connect(mapStateToProps, { getPosts })(Posts);
