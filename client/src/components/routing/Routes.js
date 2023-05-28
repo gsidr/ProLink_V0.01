@@ -36,7 +36,7 @@ const Routes = () => {
         <Route component={NotFound} />
       </Switch>
     </section>
-  ); //A higher-order component is a function that takes a component uses a condition and returns a new component
+  ); //(PrivateRoute)A higher-order component is a function that takes a component uses a condition and returns a new component
 };
 
 export default Routes;
